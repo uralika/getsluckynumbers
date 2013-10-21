@@ -11,7 +11,7 @@ Use case and prospective functionality:
 * User requests lucky numbers for one of CA Lottery games in the browser. Returns a random list of questions from the database. 
 * User submits answers. Random numbers are generated and returned to the browser. 
 * User is prompted to either submit a request for more lucky numbers or check their Lucky Numbers Stash (stored in user's profile).
-* In addition, display a "Winning Stories" section at the bottom of the page. 
+* There is a "Winning Stories" section at the bottom of the page. 
 
 
 
