@@ -1,28 +1,19 @@
-== README
+== Gets Lucky Numbers
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Brief Description: CA Lottery winning numbers generator based on user input
 
-Things you may want to cover:
+* Ruby version: 2.0.0p247
+* Database: MongoDB
 
-* Ruby version
+Use case and prospective functionality:
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* User log-in
+* User requests lucky numbers for one of CA Lottery games in the browser. Returns a random list of questions from the database. 
+* User submits answers. Random numbers are generated and returned to the browser. 
+* User is prompted to either submit a request for more lucky numbers or check their Lucky Numbers Stash (stored in user's profile).
+* There is a "Winning Stories" section at the bottom of the page. 
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
+
+
