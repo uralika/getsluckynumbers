@@ -6,6 +6,7 @@ gem "mongoid", github: "mongoid/mongoid"
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
+gem 'bootstrap-sass', '~> 2.3.2.1'
 
 
 # Use Uglifier as compressor for JavaScript assets
