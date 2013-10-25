@@ -3,7 +3,7 @@
 <br /><%= form_for @user, {url: '/authentications', method: 'post'} do |u|%>
 
 <%= u.label :username, 'Username' %>
-<%= u.text_field :email %><br />
+<%= u.text_field :username %><br />
 
 <%= u.label :password, 'Password' %>
 <%= u.text_field :password %><br />

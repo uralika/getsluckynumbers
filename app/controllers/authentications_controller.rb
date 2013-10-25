@@ -13,11 +13,11 @@ class AuthenticationsController < ApplicationController
 	end
 
 	def create
-		user = User.find_by(username: params[:user][:email])
+		user = User.find_by(username: params[:user][:username])
 		if user
 			# authenticate user
 			if user.authenticate(params[:user][:password])
-				session[:user_id] = user.user_id
+				session[:user_id] = user.id
 				redirect_to users_url
 			else
 				flash.now.alert = "Unable to sign you in. Please try again."
