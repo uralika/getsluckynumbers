@@ -4,8 +4,8 @@ class UsersController < ApplicationController
 	end
 
 	def create
-		@user = User.create(params[:user])
-			.permit(:username, :password, :password_confirmation)
+		@user = User.create(params[:user]
+			.permit(:username, :password, :password_confirmation))
 		redirect_to action: "new"
 	end
 end
