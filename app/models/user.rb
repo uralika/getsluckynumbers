@@ -15,7 +15,7 @@ class User
 	validates :username, uniqueness: { case_sensitive: true }
 	validates :password, confirmation: true
 
-	before_save :hashed_password
+	before_save :hash_password
 
 	def authenticate(password)
 		self.hashed_password ==
@@ -27,7 +27,7 @@ class User
 		if password.present?
 			self.salt = BCrypt::Engine.generate_salt
 			self.hashed_password =
-			Bcrypt::Engine.hash_secret(password, self.salt)
+			BCrypt::Engine.hash_secret(password, self.salt)
 			password = password_confirmation = nil
 		end
 	end
