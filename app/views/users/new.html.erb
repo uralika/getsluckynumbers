@@ -1,0 +1,16 @@
+<h1>Join Lucky</h1>
+
+<br /><%= form_for @user do |u| %>
+
+<%= u.label :username, 'Username' %>
+<% u.text_field :username %><br />
+
+<%= u.label :password, 'Password' %>
+<%= u.text_field :password %><br />
+
+<%= u.label :password_confirmation, 'Confirm Password' %>
+<%= u.text_field :password_confirmation %>
+<hr />
+	<%= u.submit %>
+<% end %>
+<hr />
