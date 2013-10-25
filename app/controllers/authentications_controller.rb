@@ -32,3 +32,4 @@ class AuthenticationsController < ApplicationsController
 		notice: "You signed out."
 		end
 	end
+end
