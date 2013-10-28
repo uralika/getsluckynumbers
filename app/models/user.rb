@@ -5,14 +5,14 @@ class User
 
 	attr_accessor :password, :password_confirmation
 
-	field :username, type: String
+	field :email, type: String
 	field :salt, type: String
 	field :hashed_password, type: String
 
-	embeds_one :profile
+	#embeds_one :profile
 
-	validates :username, presence: true
-	validates :username, uniqueness: { case_sensitive: true }
+	validates :email, presence: true
+	validates :email, uniqueness: { case_sensitive: false }
 	validates :password, confirmation: true
 
 	before_save :hash_password

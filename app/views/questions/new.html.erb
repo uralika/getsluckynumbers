@@ -1,0 +1,46 @@
+<h1>Get lucky numbers!</h1>
+
+<form role="form">
+	<div class="form-group">
+		<%= form_for @questions do |quest| %>
+	<p><h2>1.</h1>
+		<%= quest.label :text %>
+		<%= quest.text_field :answer %>
+	</p>
+
+	<p>	<h2>2. </h>
+		<%= quest.label :text %>
+		<%= quest.text_field :answer %>
+	</p>
+
+	<p>	<h2>3. </h>
+		<%= quest.label :text %>
+		<%= quest.text_field :answer %>
+	</p>
+
+	<p>	<h2>4. </h>
+		<%= quest.label :text %>
+		<%= quest.text_field :answer %>
+	</p>
+
+	<p>	<h2>5. </h>
+		<%= quest.label :text %>
+		<%= quest.text_field :answer %>
+	</p>
+
+	<p>	<h2>POWERBALL </h>
+		<%= quest.label :text %>
+		<%= quest.text_field :answer %>
+	</p>
+
+	<p>
+		<%= quest.submit 'Generate!'%>
+	</p>
+
+	<%end%>
+</div>
+
+
+
+
+

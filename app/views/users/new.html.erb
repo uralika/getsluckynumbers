@@ -2,8 +2,8 @@
 
 <br /><%= form_for @user do |u| %>
 
-<%= u.label :username, 'Username' %>
-<%= u.text_field :username %><br />
+<%= u.label :email, 'Email' %>
+<%= u.text_field :email%><br />
 
 <%= u.label :password, 'Password' %>
 <%= u.text_field :password %><br />
@@ -13,4 +13,8 @@
 <br />
 	<%= u.submit 'Create an Account' %>
 <% end %>
+
+<hr />
+
+User id: <%= session[:user_id] %>
 
