@@ -6,10 +6,10 @@
 <%= u.text_field :email%><br />
 
 <%= u.label :password, 'Password' %>
-<%= u.text_field :password %><br />
+<%= u.text_field :password, {type: 'password'} %><br />
 
 <%= u.label :password_confirmation, 'Confirm Password' %>
-<%= u.text_field :password_confirmation %>
+<%= u.text_field :password_confirmation, {type: 'password'} %>
 <br />
 	<%= u.submit 'Create an Account' %>
 <% end %>
