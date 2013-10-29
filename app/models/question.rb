@@ -2,7 +2,7 @@ class Question
 
 	include Mongoid::Document
 
-	attr_accessor :question, :text, :number
+	#attr_accessor :question, :text, :number
 
 	field :text, type: String
 	field :number, type: Integer

@@ -7,11 +7,12 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Game.destroy_all
 
-Game.create = ([{ title: "POWERBALL"} ])
+games = Game.create([{ title: "POWERBALL"} ])
 
 Question.destroy_all
 
-Question.create = ([
+#game.questions.create
+	Question.create([
 	{number: 1, text: "What is your favorite number?"},
 	{number: 2, text: "When is your birthday?"},
 	{number: 3, text: "Life on Mars?"},
