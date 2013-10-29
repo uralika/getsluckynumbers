@@ -9,15 +9,15 @@ class QuestionsController < ApplicationController
 	end
 
 	def show
-		@question.find(params[:number])
+		@question.find(params[:text])
 
 	def create
-		@question = Question.create(params[:question].permit(:number, :text))
+		@question = Question.create(params[:question].permit(:text))
 		#:action => "show", :number => @question.number
 	end
 
 	def destroy
-		Question.find(params[:number]).destroy
+		Question.find(params[:text]).destroy
 		redirect_to questions_url
 	end
 end

@@ -12,12 +12,16 @@ Getsluckynumbers::Application.routes.draw do
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
-  
+  resources :games do
+    resources :questions do
+    end
+  end
+
   # Example resource route (maps HTTP verbs to controller actions automatically):
   delete 'authentications' => 'authentications#destroy'
   post 'authentications' => 'authentications#create'
   get 'authentications' => 'authentications#new'
-  resources :games, :users, :authentications, :numbers, :profiles, :questions
+  resources :games, :users, :authentications, :profiles, :questions
 
   # Example resource route with options:
   #   resources :products do
