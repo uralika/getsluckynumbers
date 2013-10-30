@@ -20,9 +20,9 @@ class AuthenticationsController < ApplicationController
 				session[:user_id] = user.id
 				redirect_to root_url
 			
-			else user 
-				flash.now.alert = "Unable to sign you in. Please try again."
-				render :new
+			else user
+				#flash.now.alert = "Unable to sign you in. Please try again."
+				redirect_to authentications_new_path
 			end
 		end
 	end

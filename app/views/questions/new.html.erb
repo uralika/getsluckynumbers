@@ -2,39 +2,39 @@
 
 <form role="form">
 	<div class="form-group">
-		<%= form_for @questions do |quest| %>
-	<p><h2>1.</h1>
-		<%= quest.label :text %>
-		<%= quest.text_field :answer %>
-	</p>
-
-	<p>	<h2>2. </h>
-		<%= quest.label :text %>
-		<%= quest.text_field :answer %>
-	</p>
-
-	<p>	<h2>3. </h>
-		<%= quest.label :text %>
-		<%= quest.text_field :answer %>
-	</p>
-
-	<p>	<h2>4. </h>
-		<%= quest.label :text %>
-		<%= quest.text_field :answer %>
-	</p>
-
-	<p>	<h2>5. </h>
-		<%= quest.label :text %>
-		<%= quest.text_field :answer %>
-	</p>
-
-	<p>	<h2>POWERBALL </h>
-		<%= quest.label :text %>
-		<%= quest.text_field :answer %>
+		<%= form_for @questions do |q| %>
+	<p>
+		<%= q.label :text, "1. " + Game.first.questions[rand(0..5)].text %>
+		<%= q.text_field :answer %>
 	</p>
 
 	<p>
-		<%= quest.submit 'Generate!'%>
+		<%= q.label :text, "2. " + Game.first.questions[rand(6..10)].text %>
+		<%= q.text_field :answer %>
+	</p>
+
+	<p>
+		<%= q.label :text, "3. " + Game.first.questions[rand(11..15)].text %>
+		<%= q.text_field :answer %>
+	</p>
+
+	<p>
+		<%= q.label :text, "4. " + Game.first.questions[rand(16..20)].text %>
+		<%= q.text_field :answer %>
+	</p>
+
+	<p>
+		<%= q.label :text, "5. " + Game.first.questions[rand(21..25)].text %>
+		<%= q.text_field :answer %>
+	</p>
+
+	<p>	<h2>POWERBALL </h>
+		<%= q.label :text, Game.first.questions[rand(25..32)].text %>
+		<%= q.text_field :answer %>
+	</p>
+
+	<p> 
+		<%= q.submit 'Generate!'%>
 	</p>
 
 	<%end%>

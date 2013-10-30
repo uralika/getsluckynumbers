@@ -11,6 +11,7 @@ class User
 	field :hashed_password, type: String
 
 	#embeds_one :profile
+	#has_many :numbers
 
 	validates :email, presence: true
 	validates :email, uniqueness: { case_sensitive: false }
