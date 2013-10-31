@@ -20,7 +20,6 @@ class User
 
 	before_save :hash_password
 
-	has_many :scores
 
 	def authenticate(password)
 		self.hashed_password ==

@@ -15,7 +15,6 @@ class QuestionsController < ApplicationController
 
 	def create
 		@question = Question.create(params[:question].permit(:text))
-		#:action => "show", :number => @question.number
 	end
 
 	def destroy
