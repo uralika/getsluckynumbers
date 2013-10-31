@@ -9,13 +9,9 @@ Game.destroy_all
 
 games = Game.create(title: "POWERBALL", questions: [
 
-#Question.destroy_all
 
-
-	#Question.create
-	#game.questions.create
 	Question.new(text: "What is your favorite number?"),
-	Question.new(text: "When is your birthday?"),
+	Question.new(text: "When is your Birthday?"),
 	Question.new(text: "Life on Mars?"),
 	Question.new(text: "Who let the dogs out?"),
 	Question.new(text: "What's in store?"),
@@ -48,3 +44,21 @@ games = Game.create(title: "POWERBALL", questions: [
 	Question.new(text: "Who are you?"),
 	Question.new(text: "How long is too long?"),
 	])
+
+# Seed some scores for our users
+u = User.all[0]
+u.scores.create(test_name:"SAT", test_score:1208)
+u.scores.create(test_name:"ACT", test_score:29)
+u.scores.create(test_name:"AFQT", test_score:76)
+u = User.all[1]
+u.scores.create(test_name:"SAT", test_score:932)
+u.scores.create(test_name:"ACT", test_score:24)
+u.scores.create(test_name:"AFQT", test_score:58)
+u = User.all[2]
+u.scores.create(test_name:"SAT", test_score:1121)
+u.scores.create(test_name:"ACT", test_score:30)
+u.scores.create(test_name:"AFQT", test_score:63)
+u = User.all[3]
+u.scores.create(test_name:"SAT", test_score:1360)
+u.scores.create(test_name:"ACT", test_score:33)
+u.scores.create(test_name:"AFQT", test_score:87)

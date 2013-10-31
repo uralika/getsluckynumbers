@@ -1,4 +1,4 @@
-<h1>Get lucky numbers!</h1>
+<h1>First, Some Random Questions:</h1>
 
 <form role="form">
 	<div class="form-group">
@@ -28,13 +28,14 @@
 		<%= q.text_field :answer %>
 	</p>
 
-	<p>	<h2>POWERBALL </h>
+	<p>	<h2>Special POWERBALL Question: </h>
 		<%= q.label :text, Game.first.questions[rand(25..32)].text %>
 		<%= q.text_field :answer %>
 	</p>
 
 	<p> 
-		<%= q.submit 'Generate!'%>
+		<%= q.submit 'Come Again?'%>
+		<%= link_to "<button>Ok, What's Next?</button>".html_safe, '/numbers/new', :id => "button_id", :class => "button_class" %>
 	</p>
 
 	<%end%>

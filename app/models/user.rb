@@ -10,14 +10,17 @@ class User
 	field :salt, type: String
 	field :hashed_password, type: String
 
-	#embeds_one :profile
-	#has_many :numbers
+	has_and_belongs_to_many :unumbers, class_name:"Number", 
+    inverse_of: :nusers
+
 
 	validates :email, presence: true
 	validates :email, uniqueness: { case_sensitive: false }
 	validates :password, confirmation: true
 
 	before_save :hash_password
+
+	has_many :scores
 
 	def authenticate(password)
 		self.hashed_password ==

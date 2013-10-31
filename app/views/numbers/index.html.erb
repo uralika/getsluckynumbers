@@ -1,0 +1,24 @@
+ <div id="indexcontainer"> 
+  <h1>List of Lucky Numbers</h1>
+
+<table>
+  <tr>
+    <th>Lucky Numbers</th>
+    <th></th>
+  </tr>
+  <% @numbers.each do |number| %>
+  
+    <tr>
+      <td><%= number.number %></td>
+      <td><a href='/numbers/edit/<%= number.id%>'></a></td>
+      <td>
+        <% if current_user.unumbers.include? number %>
+        <%= button_to "X", { action: "destroy", id: number.id}, {method: :delete, :class => "mybutton"}
+      %>
+        <%= link_to 'edit', edit_number_path(number) %>
+      <% end %>
+    </td>
+    </tr>
+  <% end %>
+</table>
+</div>
