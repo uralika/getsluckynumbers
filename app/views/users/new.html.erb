@@ -13,7 +13,7 @@
 <%= u.label :password_confirmation, 'Confirm Password' %>
 <%= u.text_field :password_confirmation, {type: 'password'} %>
 <br />
-	<%= u.submit 'Create an Account' %>
+	<a href="/authentications/new"><%= u.submit 'Create an Account' %></a>
 <% end %>
 
 <hr />
