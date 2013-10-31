@@ -5,7 +5,7 @@ def index
         if current_user
                 @numbers = current_user.unumbers
         else
-                redirect_to root_url
+                redirect_to authentications_url
         end
 
 end
@@ -24,7 +24,7 @@ end
 
 def create
                 
-        current_user.unumbers.create(params[:number].permit(:number))
+        current_user.unumbers.create(params[:number].permit(:number, :time))
                 redirect_to numbers_url
 
 end
@@ -37,7 +37,7 @@ end
 def update
         @number = Number.find(params[:id])
 
-        if @number.update_attributes(params[:number].permit(:number))
+        if @number.update_attributes(params[:number].permit(:number, :time))
                 redirect_to action: 'show', id: @number
         else
                 render 'edit'

@@ -1,14 +1,19 @@
 class QuestionsController < ApplicationController
 
 	def index
+
 		@questions = Question.all
 		
-
 	end
 
 	def new
+
+	if current_user
 		@questions = Question.new
+	else 
+		redirect_to authentications_url
 	end
+end
 
 	def show
 		@question.find(params[:text])

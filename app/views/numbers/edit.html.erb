@@ -1,12 +1,11 @@
-<h1>Edit lucky numbers</h1>
+<h1>Edit/ Add A Note</h1>
 <%= form_for :number do |number| %>
 <p>
-        <%= number.label :number, "Numbers"%>
         <%= number.text_area :number %>
 </p>
 
 <p>
-<%= number.submit "Update Number" %>
+<%= number.submit "Update" %>
 </p>
 
 <%end%>
