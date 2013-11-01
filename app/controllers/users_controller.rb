@@ -7,6 +7,7 @@ class UsersController < ApplicationController
 		@user = User.create(params[:user]
 			.permit(:email, :password, :password_confirmation, :username))
 		if @user.save
+			session[:user_id] = @user.id
 			redirect_to "/authentications/new"
 		else
 			redirect_to action:"new"
