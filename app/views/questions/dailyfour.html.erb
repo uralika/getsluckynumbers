@@ -1,0 +1,32 @@
+<h1>The Daily Four Questions:</h1>
+
+<form role="form">
+	<div class="form-group">
+		<%= form_for :questions do |q| %>
+	<p>
+		<%= q.label :text, "1. " + Game.first.questions[rand(0..8)].text %>
+		<%= q.text_field :answer %>
+	</p>
+
+	<p>
+		<%= q.label :text, "2. " + Game.first.questions[rand(9..19)].text %>
+		<%= q.text_field :answer %>
+	</p>
+
+	<p>
+		<%= q.label :text, "3. " + Game.first.questions[rand(20..26)].text %>
+		<%= q.text_field :answer %>
+	</p>
+
+	<p>
+		<%= q.label :text, "4. " + Game.first.questions[rand(27..32)].text %>
+		<%= q.text_field :answer %>
+	</p>
+
+	<p> 
+		<%= q.submit 'Come Again?'%>
+		<%= link_to "<button>Ok, What's Next?</button>".html_safe, '/numbers/new', :id => "button_id", :class => "button_class" %>
+	</p>
+
+	<%end%>
+</div>

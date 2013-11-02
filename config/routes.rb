@@ -23,7 +23,15 @@ Getsluckynumbers::Application.routes.draw do
   delete 'authentications' => 'authentications#destroy'
   post 'authentications' => 'authentications#create'
   get 'authentications' => 'authentications#new'
-  resources :games, :users, :authentications, :questions, :numbers
+  resources :questions, :except =>['show']
+  get 'questions/mega' => 'questions#mega'
+  get 'questions/super' => 'questions#super'
+  get 'questions/fantasy' => 'questions#fantasy'
+  get 'questions/dailyfour' => 'questions#dailyfour'
+  get 'questions/dailythree' => 'questions#dailythree'
+  resources :games, :users, :authentications, :numbers
+
+
 
   # Example resource route with options:
   #   resources :products do

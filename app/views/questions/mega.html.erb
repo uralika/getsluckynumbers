@@ -1,4 +1,4 @@
-<h1>First, Some POWER Questions:</h1>
+<h1>For the First Five Numbers:</h1>
 
 <form role="form">
 	<div class="form-group">
@@ -28,7 +28,7 @@
 		<%= q.text_field :answer %>
 	</p>
 
-	<p>	<h2>Now, for the BALL Question: </h>
+	<p>	<h2>Now, for the MEGA Question: </h>
 		<%= q.label :text, Game.first.questions[rand(25..32)].text %>
 		<%= q.text_field :answer %>
 	</p>

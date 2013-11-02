@@ -1,0 +1,37 @@
+<h1>Some Fantasy Questions:</h1>
+
+<form role="form">
+	<div class="form-group">
+		<%= form_for :questions do |q| %>
+	<p>
+		<%= q.label :text, "1. " + Game.first.questions[rand(0..6)].text %>
+		<%= q.text_field :answer %>
+	</p>
+
+	<p>
+		<%= q.label :text, "2. " + Game.first.questions[rand(7..11)].text %>
+		<%= q.text_field :answer %>
+	</p>
+
+	<p>
+		<%= q.label :text, "3. " + Game.first.questions[rand(12..17)].text %>
+		<%= q.text_field :answer %>
+	</p>
+
+	<p>
+		<%= q.label :text, "4. " + Game.first.questions[rand(18..23)].text %>
+		<%= q.text_field :answer %>
+	</p>
+
+	<p>
+		<%= q.label :text, "5. " + Game.first.questions[rand(24..32)].text %>
+		<%= q.text_field :answer %>
+	</p>
+
+	<p> 
+		<%= q.submit 'Come Again?'%>
+		<%= link_to "<button>Ok, What's Next?</button>".html_safe, '/numbers/new', :id => "button_id", :class => "button_class" %>
+	</p>
+
+	<%end%>
+</div>
