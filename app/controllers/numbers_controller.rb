@@ -16,6 +16,37 @@ def new
         
 end
 
+def megan
+
+        @number = Number.new
+        
+end
+
+def supern
+
+        @number = Number.new
+        
+end
+
+def fantasyn
+
+        @number = Number.new
+        
+end
+
+def dailyfourn
+
+        @number = Number.new
+        
+end
+
+def dailythreen
+
+        @number = Number.new
+        
+end
+
+
 def show
 
         @number = Number.find(params[:id])

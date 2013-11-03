@@ -6,7 +6,7 @@ class QuestionsController < ApplicationController
 		
 	end
 
-	def new
+	def powerball
 
 	if current_user
 		@questions = Question.new

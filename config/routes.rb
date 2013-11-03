@@ -29,6 +29,12 @@ Getsluckynumbers::Application.routes.draw do
   get 'questions/fantasy' => 'questions#fantasy'
   get 'questions/dailyfour' => 'questions#dailyfour'
   get 'questions/dailythree' => 'questions#dailythree'
+  get 'questions/powerball' => 'questions#powerball'
+  get 'numbers/megan' => 'numbers#megan'
+  get 'numbers/supern' => 'numbers#supern'
+  get 'numbers/fantasyn' => 'numbers#fantasyn'
+  get 'numbers/dailyfourn' => 'numbers#dailyfourn'
+  get 'numbers/dailythreen' => 'numbers#dailythreen'
   resources :games, :users, :authentications, :numbers
 
 
