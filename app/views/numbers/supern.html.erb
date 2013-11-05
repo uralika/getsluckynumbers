@@ -1,12 +1,16 @@
 <h1>Congratulations!!!</h1>
 <%= form_for @number do |number| %>
+
 <p>
-        <%= number.label :number, "Your Lucky Numbers Are:"%>
-       <%= number.text_area(:number, :value => ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47].shuffle.pop(5).to_s + " SuperPlus: " + [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27].shuffle.pop(1).to_s)) %>
+    <%= number.label :number, "Your Lucky Numbers Are:"%>
+    <%= number.text_area(:number, :value => ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47].shuffle.pop(5).to_s + " SuperPlus: " + [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27].shuffle.pop(1).to_s)) %>
 
-		<%= number.label :time, "Generated at this lucky point in time:"%>
-		<%= number.text_area(:time, :value => (Time.now.utc.iso8601)) %>
+	<%= number.label :time, "Generated at this lucky point in time:"%>
+	<%= number.text_area(:time, :value => (Time.now.utc.iso8601)) %>
+</p>
 
+<p>
 <%= number.submit "Good Luck!!!" %>
+</p>
 
 <%end%>

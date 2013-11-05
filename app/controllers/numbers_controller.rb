@@ -1,71 +1,61 @@
 class NumbersController < ApplicationController
 
-def index
+    def index
 
         if current_user
                 @numbers = current_user.unumbers
         else
                 redirect_to authentications_url
         end
+    end
 
-end
+    def new
 
-def new
+        @number = Number.new        
+    end
 
-        @number = Number.new
-        
-end
+    def megan
 
-def megan
+        @number = Number.new       
+    end
 
-        @number = Number.new
-        
-end
+    def supern
 
-def supern
+        @number = Number.new      
+    end
 
-        @number = Number.new
-        
-end
+    def fantasyn
 
-def fantasyn
+        @number = Number.new    
+    end
 
-        @number = Number.new
-        
-end
+    def dailyfourn
 
-def dailyfourn
+        @number = Number.new    
+    end
 
-        @number = Number.new
-        
-end
+    def dailythreen
 
-def dailythreen
-
-        @number = Number.new
-        
-end
+        @number = Number.new   
+    end
 
 
-def show
+    def show
 
         @number = Number.find(params[:id])
+    end
 
-end
-
-def create
+    def create
                 
         current_user.unumbers.create(params[:number].permit(:number, :time))
                 redirect_to numbers_url
+    end
 
-end
-
-def edit
+    def edit
         @number = Number.find(params[:id])
+    end
 
-end
-
-def update
+    def update
         @number = Number.find(params[:id])
 
         if @number.update_attributes(params[:number].permit(:number, :time))
@@ -75,9 +65,9 @@ def update
         end
     end
 
-def destroy
-                Number.find(params[:id]).destroy
-                redirect_to numbers_url
-end
+    def destroy
+        Number.find(params[:id]).destroy
+        redirect_to numbers_url
+    end
 
 end

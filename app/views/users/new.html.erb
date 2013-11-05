@@ -1,6 +1,7 @@
 <h1>Sign Up</h1>
 
 <br /><%= form_for @user do |u| %>
+
 <%= u.label :username, 'Username' %>
 <%= u.text_field :username%></br>
 
@@ -13,7 +14,9 @@
 <%= u.label :password_confirmation, 'Confirm Password' %>
 <%= u.text_field :password_confirmation, {type: 'password'} %>
 <br />
+
 	<%= u.submit 'Create an Account' %>
+	
 <% end %>
 
 <hr />

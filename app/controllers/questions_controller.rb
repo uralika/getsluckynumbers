@@ -2,65 +2,63 @@ class QuestionsController < ApplicationController
 
 	def index
 
-		@questions = Question.all
-		
+		@questions = Question.all		
 	end
 
 	def powerball
 
-	if current_user
-		@questions = Question.new
-	else 
-		redirect_to authentications_url
+		if current_user
+		   @questions = Question.new
+		else 
+		   redirect_to authentications_url
+		end
 	end
-end
 
-def mega
+	def mega
 
-	if current_user
-		@questions = Question.new
-	else 
-		redirect_to authentications_url
+		if current_user
+		   @questions = Question.new
+		else 
+		  redirect_to authentications_url
+		end
 	end
-end
 
-def fantasy
-
-	if current_user
-		@questions = Question.new
-	else 
-		redirect_to authentications_url
+	def fantasy
+	    if current_user
+		   @questions = Question.new
+		else 
+		  redirect_to authentications_url
+		end
 	end
-end
 
-def super
+	def super
 
-	if current_user
-		@questions = Question.new
-	else 
-		redirect_to authentications_url
+		if current_user
+		  @questions = Question.new
+		else 
+		  redirect_to authentications_url
+		end
 	end
-end
 
-def dailyfour
+	def dailyfour
 
-	if current_user
-		@questions = Question.new
-	else 
-		redirect_to authentications_url
+		if current_user
+		  @questions = Question.new
+		else 
+		  redirect_to authentications_url
+		end
 	end
-end
 
-def dailythree
+	def dailythree
 
-	if current_user
-		@questions = Question.new
-	else 
-		redirect_to authentications_url
+		if current_user
+		  @questions = Question.new
+		else 
+		  redirect_to authentications_url
+		end
 	end
-end
 
-   def show
+   	def show
 		@question = Game.first.questions.find(params[:id])
 	end
 

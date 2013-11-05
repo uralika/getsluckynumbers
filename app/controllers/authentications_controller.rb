@@ -8,8 +8,6 @@ class AuthenticationsController < ApplicationController
 			redirect_to root_url
 		else
 			@user = User.new
-
-			# render :new
 		end
 	end
 
@@ -21,7 +19,6 @@ class AuthenticationsController < ApplicationController
 				if session[:user_id] = user.id
 					redirect_to root_url
 			else 
-				#flash.now.alert = "Unable to sign you in. Please try again."
 				redirect_to authentications_url 
 			end
 		end
