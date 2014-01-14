@@ -1,4 +1,4 @@
-<h1>First, Some POWER Questions:</h1>
+<h1>POWER:</h1>
 
 <form role="form">
 	<div class="form-group">
@@ -28,14 +28,15 @@
 		<%= q.text_field :answer %>
 	</p>
 
-	<p>	<h2>Now, for the BALL Question: </h>
+	<h1>BALL: </h1>
+	<p>
 		<%= q.label :text, Game.first.questions[rand(25..32)].text %>
 		<%= q.text_field :answer %>
 	</p>
 
 	<p> 
-		<%= q.submit 'Not Sure About These Questions...'%>
-		<%= link_to "<button>Ok, What's Next?</button>".html_safe, '/numbers/new', :id => "button_id", :class => "button_class" %>
+		<%= q.submit 'Not Sure', :class =>'button' %>
+		<%= link_to "<button>Next</button>".html_safe, '/numbers/new', :id => "button_id", :class => "button_class" %>
 	</p>
 
 	<%end%>

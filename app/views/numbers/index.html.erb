@@ -3,8 +3,8 @@
 
 <table>
   <tr>
-    <th>Numbers</th>
-    <th>Lucky Times</th>
+    <th><p><b>Numbers</b></p></th>
+    <th><p><b>Lucky Times</b></p></th>
   </tr>
   <% @numbers.each do |number| %>
   
@@ -14,7 +14,7 @@
       <td><a href='/numbers/edit/<%= number.id%>'></a></td>
       <td>
         <% if current_user.unumbers.include? number %>
-        <%= button_to "X", { action: "destroy", id: number.id}, {method: :delete, :class => "mybutton"}
+        <%= button_to "X", { action: "destroy", id: number.id}, {method: :delete, :class => "button"}
       %>
         <%= link_to 'edit', edit_number_path(number) %>
       <% end %>

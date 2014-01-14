@@ -6,6 +6,8 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Monoton' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister' rel='stylesheet' type='text/css'>
 
 </head>
 <body>
@@ -26,7 +28,7 @@
 		<% end %>
 
 		<% if current_user %>
-		<li><%= button_to "Log out", "/authentications", method: :delete %></li>
+		<li><%= button_to "Log out", "/authentications", method: :delete, :class => 'button' %></li>
 		<% end %>
 		</ul>
 	</nav>

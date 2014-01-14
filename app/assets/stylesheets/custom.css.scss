@@ -1,7 +1,74 @@
 @import 'bootstrap';
 @import 'bootstrap-responsive';
 
+body {
+  font-family: helvetica, sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
+  background: url("/assets/calottery.jpg");
+  background-size: 85%;
+  background-position: right;
+
+}
+
 .container {
-	margin: 0 auto;
-	width: 400px;
+	height: 200px;
+	background-size: cover;
+	position: relative;
+	margin: 40px 0 0 0;
+	border-radius: 12px;
+}
+
+.main {
+	height: 200px;
+	background-size: cover;
+	position: relative;
+	margin: 40px 0 0 0;
+	border-radius: 12px;
+}
+
+h1 {
+	font-family: 'Monoton', cursive;
+}
+
+p {
+	font-family: 'Love Ya Like A Sister', cursive;
+	font-size: 20px;
+}
+
+li {
+	font-family: 'Love Ya Like A Sister', cursive;
+}
+
+.button {
+	font-family: 'Love Ya Like A Sister', cursive;
+
+}
+
+.button:hover {
+   background: #f5a70a;
+}
+
+button {
+	font-family: 'Love Ya Like A Sister', cursive;
+}
+
+button:hover {
+   background: #f5a70a;
+}
+
+@media screen and (device-aspect-ratio: 2/3) {
+
+ .container {
+    margin: 20px 12px 0 12px;
+  }
+
+  .main {
+    margin: 20px 12px 0 12px;   
+  }
+
+}
+
+.clearfix {
+        clear: both;
 }

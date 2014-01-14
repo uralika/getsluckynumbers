@@ -1,4 +1,4 @@
-<h1>The Daily Four Questions:</h1>
+<h1>Daily Four:</h1>
 
 <form role="form">
 	<div class="form-group">
@@ -24,8 +24,8 @@
 	</p>
 
 	<p> 
-		<%= q.submit 'Not Sure About These Questions...'%>
-		<%= link_to "<button>Ok, What's Next?</button>".html_safe, '/numbers/dailyfourn', :id => "button_id", :class => "button_class" %>
+		<%= q.submit 'Not Sure', :class => 'button' %>
+		<%= link_to "<button>Next</button>".html_safe, '/numbers/dailyfourn', :id => "button_id", :class => "button_class" %>
 	</p>
 
 	<%end%>

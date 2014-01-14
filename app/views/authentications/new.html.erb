@@ -2,12 +2,12 @@
 
 <br /><%= form_for @user, {url: '/authentications', method: 'post'} do |u|%>
 
-<%= u.label :email, 'Email' %>
+<p><%= u.label :email, 'Email' %></p>
 <%= u.text_field :email %><br />
 
-<%= u.label :password, 'Password' %>
+<p><%= u.label :password, 'Password' %></p>
 <%= u.text_field :password, {type: 'password'} %><br />
-<%= u.submit "Log In"%>
+<%= u.submit "Log In", :class => 'button' %>
 <% end %>
 
 <hr />
