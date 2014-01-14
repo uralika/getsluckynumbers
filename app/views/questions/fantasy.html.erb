@@ -1,3 +1,4 @@
+
 <h1>Some Fantasy Questions:</h1>
 
 <form role="form">
@@ -22,6 +23,7 @@
 		<%= q.label :text, "4. " + Game.first.questions[rand(18..23)].text %>
 		<%= q.text_field :answer %>
 	</p>
+
 
 	<p>
 		<%= q.label :text, "5. " + Game.first.questions[rand(24..32)].text %>
